@@ -11,14 +11,33 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
       4. Enter `set locale settings` appropriate for the end user
 4. Select the SD card from `Choose Storage`
 
+
+## II. Router Initialization
+
+> This is from my memory. I may be dropping step(s). Correct me if I'm wrong... Teehee.
+1. Gather Hardware:
+      1. Router
+      2. Power Cable
+      3. Ethernet Cable
+2. Power the Router
+3. Connect Devices
+      1. Connect Raspberry Pi to router using ethernet
+      2. Connect your personal computer to the router WiFi listed similar to `TP-Link`
+4. Configure the Router with your computer
+      > I forget the exact tabs I will have to look at it again
+      1. Select your Raspberry Pi
+      2. Assign it a static IP Address 
+            1. **Make note of this address**. Both you **and** the end user will need it.
+> Are there more steps??
+
 <!-- Maybe we should suggest doing this after the router setup -->
-## II. Pi Initialization
+## III. Pi Initialization
 1. Gather Hardware:
       1. SD Card w/ Pi OS
       2. Power Cable
-      3. Ethernet Cable
+      3. Ethernet Cable (if not already)
       4. Peripherals (as needed)
-      5. Your ~~delicious~~ Raspberry Pi~~e~~
+      5. Your ~~delicious~~ Raspberry Pi
 
 2. Connect to Pi (**SSH** or **Peripherals**)
       
@@ -58,7 +77,3 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 
       **rpi/nginx-config/**<br>
       The contents of this folder should **replace** the nginx configs `/etc/nginx/sites-available/default` file
-
-
-## III. Router Initialization
-TBA
