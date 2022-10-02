@@ -50,14 +50,14 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
             > https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-debian-packages
       
 4. Update the folders on the Raspberry Pi as instructed for each of these folders on this repository      
-**rpi/root/**<br>
-The contents of this folder should be unloaded to the root `~/` directory 
+      **rpi/root/**<br>
+      The contents of this folder should be unloaded to the root `~/` directory 
 
-**rpi/html/**<br>
-The contents of this folder should be unloaded to the html `/var/www/html` directory
+      **rpi/html/**<br>
+      The contents of this folder should be unloaded to the html `/var/www/html` directory
 
-**rpi/nginx-config/**<br>
-The contents of this folder should **replace** the nginx configs `/etc/nginx/sites-available/default` file
+      **rpi/nginx-config/**<br>
+      The contents of this folder should **replace** the nginx configs `/etc/nginx/sites-available/default` file
 
 
 ## III. Router Initialization
