@@ -12,10 +12,43 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    3. Check `set username and password` and enter `username:` to emurr and `password:` to a **secure** password you are comfortable entering through SSH.
    4. Enter `set locale settings` appropriate for the end user
 4. Select the SD card from `Choose Storage`
+5. Wait for the download to complete. This may take a while. Feel free to move to the next section while waiting.
+
+## II. Router Initialization
+
+### Model TP-Link AC1200
+
+1. Power on the router
+
+2. Configure via Web Browser GUI. Connect to the router via Wi-Fi or Ethernet following the steps shown below. ![](/router-manual/Archer_C1200.png)
+
+3. After you log in, follow the step for the Quick Setup
+
+   - Select time zone
+   - Select Internet Connection Type (Auto Detect). Since the router will not be connected to the internet, leave it as default and proceed to the next step.
+   - Customize Wi-Fi network
+     - Enable 2.4GHz & 5GHZ Wireless
+     - Define Network Name (SSID). Current SSIDs of the router are: **\_** & **\_\_**
+     - Set up a password (optional). Current Wi-Fi networks are open.
+   - Test the setup by connecting the computer to the created Wi-Fi network and logging back into the browser GUI.
+
+4. Connect RPi to the router using an Ethernet cable. Note that the DHCP Server will assign a random IP address to the RPi and other devices connected to it.
+
+5. Set up address reservation (fixed IP address) for Raspberry Pi (RPi)
+
+   1. Go to Advanced > Network > DHCP Server
+   2. In the DHCP Client List, find the current IP address of the RPi OR open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig-current.png)<br><br>
+
+   > eth0 is the LAN (wired) interface.
+   >
+   > - IP address is squared in red
+   > - MAC address in squared in blue
+
+   3. In the Address Reservation section, click Add and enter the desire IP address and MAC address of the RPi and save the settings.
+
 
 <!-- Maybe we should suggest doing this after the router setup -->
-
-## II. Pi Initialization
+## III. Pi Initialization
 
 1. Gather Hardware:
 
@@ -56,35 +89,3 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    **rpi/html/**<br> The contents of this folder should be unloaded to the html `/var/www/html` directory
 
    **rpi/nginx-config/**<br> The contents of this folder should **replace** the nginx configs `/etc/nginx/sites-available/default` file
-
-## III. Router Initialization
-
-### Model TP-Link AC1200
-
-1. Power on the router
-
-2. Configure via Web Browser GUI. Connect to the router via Wi-Fi or Ethernet following the steps shown below. ![](/router-manual/Archer_C1200.png)
-
-3. After you log in, follow the step for the Quick Setup
-
-   - Select time zone
-   - Select Internet Connection Type (Auto Detect). Since the router will not be connected to the internet, leave it as default and proceed to the next step.
-   - Customize Wi-Fi network
-     - Enable 2.4GHz & 5GHZ Wireless
-     - Define Network Name (SSID). Current SSIDs of the router are: **\_** & **\_\_**
-     - Set up a password (optional). Current Wi-Fi networks are open.
-   - Test the setup by connecting the computer to the created Wi-Fi network and logging back into the browser GUI.
-
-4. Connect RPi to the router using an Ethernet cable. Note that the DHCP Server will assign a random IP address to the RPi and other devices connected to it.
-
-5. Set up address reservation (fixed IP address) for Raspberry Pi (RPi)
-
-   1. Go to Advanced > Network > DHCP Server
-   2. In the DHCP Client List, find the current IP address of the RPi OR open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig-current.png)<br><br>
-
-   > eth0 is the LAN (wired) interface.
-   >
-   > - IP address is squared in red
-   > - MAC address in squared in blue
-
-   3. In the Address Reservation section, click Add and enter the desire IP address and MAC address of the RPi and save the settings.
