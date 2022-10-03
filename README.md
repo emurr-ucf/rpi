@@ -70,11 +70,21 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    - Select time zone
    - Select Internet Connection Type (Auto Detect). Since the router will not be connected to the internet, leave it as default and proceed to the next step.
    - Customize Wi-Fi network
+     - Enable 2.4GHz & 5GHZ Wireless
+     - Define Network Name (SSID). Current SSIDs of the router are: **\_** & **\_\_**
+     - Set up a password (optional). Current Wi-Fi networks are open.
+   - Test the setup by connecting the computer to the created Wi-Fi network and logging back into the browser GUI.
 
-4. Connect RPi to the router using an Ethernet cable. Note that the
+4. Connect RPi to the router using an Ethernet cable. Note that the DHCP Server will assign a random IP address to the RPi and other devices connected to it.
 
 5. Set up address reservation (fixed IP address) for Raspberry Pi (RPi)
 
-   2. Go to Advanced > Network > DHCP Server 3. In the DHCP Client List, find the current IP address of the RPi OR open a terminal in the RPi and type `ifconfig`. You will get something like this: ![](/router-manual/ifconfig-current.png) eth0 is the LAN (wired) interface. - IP address is squared in red - MAC address in squared in blue
+   1. Go to Advanced > Network > DHCP Server
+   2. In the DHCP Client List, find the current IP address of the RPi OR open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig-current.png)<br><br>
 
-   3. In the Address Reservation section, click Add and enter the desire IP address and save the settings.
+   > eth0 is the LAN (wired) interface.
+   >
+   > - IP address is squared in red
+   > - MAC address in squared in blue
+
+   3. In the Address Reservation section, click Add and enter the desire IP address and MAC address of the RPi and save the settings.
