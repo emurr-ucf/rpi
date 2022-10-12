@@ -6,6 +6,8 @@ preUSB=/home/emurr/previous-usb.txt
 diffUSB=/home/emurr/diff-usb.txt
 output=/dev/tty1
 
+# Blink to Begin
+echo timer > /sys/class/leds/led0/trigger
 
 # await race condition...
 echo "sleep 10s for race condition" > $output
@@ -27,4 +29,7 @@ directory=$(sed -n '2{p;q}' "$diffUSB")
 sudo mount "$directory" /media/usb
 
 # copy the mounted USB files to our NGINX dir
-sudo cp -r /media/usb/toursite /var/www/html/
+sudo cp -r /media/usb/toursite /var/www/html/nginx/
+
+# dedicated finish
+echo mmc0 > /sys/class/leds/led0/trigger

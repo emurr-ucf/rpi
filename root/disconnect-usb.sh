@@ -11,5 +11,3 @@ comm -13 /home/emurr/previous-usb.txt /home/emurr/current-usb.txt > /home/emurr/
 directory=$(sed -n '2{p;q}' /home/emurr/diff-usb.txt)
 
 sudo umount "$directory"
-
-
