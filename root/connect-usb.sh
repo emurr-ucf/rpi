@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Clear Old Tours
-sudo rm /var/www/html/nginx/toursite/*
+sudo rm -r /var/www/html/nginx/toursite/*
 
 # Definitions
 currUSB=/home/emurr/current-usb.txt
