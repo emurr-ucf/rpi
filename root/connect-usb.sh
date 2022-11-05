@@ -35,4 +35,4 @@ sudo mount "$directory" /media/usb
 sudo cp -r /media/usb/toursite /var/www/html/nginx/
 
 # dedicated finish
-echo mmc0 > /sys/class/leds/led0/trigger
+echo default-on > /sys/class/leds/led0/trigger

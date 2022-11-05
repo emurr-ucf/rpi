@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# default light
+echo mmc0 > /sys/class/leds/led0/trigger
+
 # get state of USB to compare to on reconnect
 currUSB=$(ls /dev/sd*)
 preUSB=/home/emurr/previous-usb.txt
