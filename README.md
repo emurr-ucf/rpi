@@ -5,7 +5,7 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 ## I. Pi Imager
 
 1. On a machine that can read to an SD card, natively or through an extension cable, install the Raspberry Pi Imager (https://www.raspberrypi.com/software/)
-2. Select Raspberry Pi OS (Other) -> Raspberry Pi OS Lite
+2. Select Raspberry Pi OS (Other) > Raspberry Pi OS Lite
 3. Update the configs with the gear icon (bottom-right):
    1. Check `select hostname` and enter emurr. This should now read emurr.local
    2. Check `enable password authentication`
@@ -20,7 +20,7 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 
 1. Power on the router
 
-2. Configure via Web Browser GUI. Connect to the router via Wi-Fi or Ethernet following the steps shown below. ![](/router-manual/Archer_C1200.png)
+2. Configure via Web Browser GUI. Connect to the router via Wi-Fi or Ethernet following the steps shown below. <br><br> ![](/router-manual/Archer_C1200.png)
 
 3. After you log in, follow the step for the Quick Setup
 
@@ -65,7 +65,7 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    **SSH**
 
    1. Power the Pi and connect ethernet to the same network as the device performing SSH
-      > **NOTE ON USING ENTERPRISE NETWORKS:**<br> You cannot use enterprise networks such as UCF WPA or eduroam. The Raspberry Pi, even with significant edits to the config files cannot > reliably connect to such networks. Trust us, we've tried.
+      > **NOTE ON USING ENTERPRISE NETWORKS:**<br> You cannot use enterprise networks such as UCF WPA or eduroam. The Raspberry Pi, even with significant edits to the config files cannot reliably connect to such networks. Trust us, we've tried.
    2. SSH to the Pi with `ssh emurr@emurr.local`
       > **If this step does not work:**<br> Get the Pi's IP address by pinging `ping emurr.local`
       >
