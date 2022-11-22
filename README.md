@@ -24,13 +24,15 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 
 3. After you log in, follow the step for the Quick Setup
 
-   - Select time zone
-   - Select Internet Connection Type (Auto Detect). Since the router will not be connected to the internet, leave it as default and proceed to the next step.
-   - Customize Wi-Fi network
-     - Enable 2.4GHz & 5GHZ Wireless
-     - Define Network Name (SSID).
-     - Set up a password (optional). Current Wi-Fi networks are open.
-   - Test the setup by connecting the computer to the created Wi-Fi network and logging back into the browser GUI.
+   1. Select time zone
+   2. Select Internet Connection Type (Auto Detect). Since the router will not be connected to the internet, leave it as default and proceed to the next step.
+   3. Customize Wi-Fi network
+
+      1. Enable 2.4GHz & 5GHZ Wireless
+      2. Define Network Name (SSID).
+      3. Set up a password (optional). Current Wi-Fi networks are open.
+
+   4. Test the setup by connecting the computer to the created Wi-Fi network and logging back into the browser GUI.
 
 4. Connect RPi to the router using an Ethernet cable. Note that the DHCP Server will assign a random IP address to the RPi and other devices connected to it.
 
