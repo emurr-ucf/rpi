@@ -34,10 +34,10 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 
 4. Connect RPi to the router using an Ethernet cable. Note that the DHCP Server will assign a random IP address to the RPi and other devices connected to it.
 
-5. Set up address reservation (fixed IP address) for Raspberry Pi (RPi)
+5. Set up address reservation (fixed IP address) for RPi
 
    1. Go to Advanced > Network > DHCP Server
-   2. In the DHCP Client List, find the current IP address of the RPi OR open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig-current.png)<br><br>
+   2. In the DHCP Client List, find the current IP address of the RPi or open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig-current.png)<br><br>
 
    > eth0 is the LAN (wired) interface.
    >
@@ -56,14 +56,14 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    2. Power Cable
    3. Ethernet Cable
    4. Peripherals (as needed)
-   5. Your ~~delicious~~ Raspberry Pi~~e~~
+   5. Your Raspberry Pi
 
 2. Connect to Pi (**SSH** or **Peripherals**)
 
    **SSH**
 
    1. Power the Pi and connect ethernet to the same network as the device performing SSH
-      > **NOTE ON USING ENTERPRISE NETWORKS:**<br> You can not use enterprise networks such as UCF WPA or eduroam. The Raspberry Pi, even with significant edits to the config files can not > reliably connect to such networks. Trust us, we've tried.
+      > **NOTE ON USING ENTERPRISE NETWORKS:**<br> You cannot use enterprise networks such as UCF WPA or eduroam. The Raspberry Pi, even with significant edits to the config files cannot > reliably connect to such networks. Trust us, we've tried.
    2. SSH to the Pi with `ssh emurr@emurr.local`
       > **If this step does not work:**<br> Get the Pi's IP address by pinging `ping emurr.local`
       >
@@ -80,12 +80,12 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    2. Login with the password specified in your Pi Imager configuration
 
 3. Install & Initialize NGINX
-   1. Install NGINX on the Raspberry Pi by running `sugo apt-get install nginx`
+   1. Install NGINX on the Raspberry Pi by running `sudo apt-get install nginx`
    2. Start the NGINX server with `sudo systemctl start nginx`
       > You may verify NGINX status with `sudo systemctl status nginx`<br><br> For more help visit NGNIX docs here:<br> > https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-debian-packages
 4. Update the folders on the Raspberry Pi as instructed for each of these folders on this repository  
     **rpi/root/**<br> The contents of this folder should be unloaded to the root `~/` directory
 
-   **rpi/html/**<br> The contents of this folder should be unloaded to the html `/var/www/html` directory
+   **rpi/html/**<br> The contents of this folder should be unloaded to the `/var/www/html` directory
 
    **rpi/nginx-config/**<br> The contents of this folder should **replace** the nginx configs `/etc/nginx/sites-available/default` file
