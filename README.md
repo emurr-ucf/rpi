@@ -28,7 +28,7 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
    - Select Internet Connection Type (Auto Detect). Since the router will not be connected to the internet, leave it as default and proceed to the next step.
    - Customize Wi-Fi network
      - Enable 2.4GHz & 5GHZ Wireless
-     - Define Network Name (SSID). Current SSIDs of the router are: **\_** & **\_\_**
+     - Define Network Name (SSID).
      - Set up a password (optional). Current Wi-Fi networks are open.
    - Test the setup by connecting the computer to the created Wi-Fi network and logging back into the browser GUI.
 
@@ -46,8 +46,8 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 
    3. In the Address Reservation section, click Add and enter the desire IP address and MAC address of the RPi and save the settings.
 
-
 <!-- Maybe we should suggest doing this after the router setup -->
+
 ## III. Pi Initialization
 
 1. Gather Hardware:
