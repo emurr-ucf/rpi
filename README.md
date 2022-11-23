@@ -39,7 +39,7 @@ This is a guide for anyone initializing an EMURR unit before being sent to end u
 5. Set up address reservation (fixed IP address) for RPi
 
    1. Go to Advanced > Network > DHCP Server
-   2. In the DHCP Client List, find the current IP address of the RPi or open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig-current.png)<br><br>
+   2. In the DHCP Client List, find the current IP address of the RPi or open a terminal in the RPi and type `ifconfig`. You will get something like this: <br><br>![](/router-manual/ifconfig.png)<br><br>
 
    > eth0 is the LAN (wired) interface.
    >
