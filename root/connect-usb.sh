@@ -18,6 +18,14 @@ echo "sleep 10s for race condition" > $output
 for i in {1..10}
 do
   echo -n "$i " > $output
+  if [[ "$(ls -A /dev/sd*)" ]]; then
+    break
+  fi
+  if [[ i -eq 9 ]]; then
+    echo "no USB found" > $output
+    echo mmc0 > /sys/class/leds/led0/trigger
+    exit -1;
+  fi
   sleep 1
 done
 
@@ -32,6 +40,7 @@ directory=$(sed -n '2{p;q}' "$diffUSB")
 sudo mount "$directory" /media/usb
 
 # copy the mounted USB files to our NGINX dir
+sudo rm -r /var/www/html/nginx/toursite/*
 sudo cp -r /media/usb/toursite /var/www/html/nginx/
 
 # dedicated finish
