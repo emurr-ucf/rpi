@@ -7,14 +7,14 @@
 currUSB=/home/emurr/current-usb.txt
 preUSB=/home/emurr/previous-usb.txt
 diffUSB=/home/emurr/diff-usb.txt
-output=/dev/tty1
+output=/dev/tty2
 
 # Blink to Begin
 echo timer > /sys/class/leds/led0/trigger
 
 # await race condition...
 echo "sleep 10s for race condition" > $output
-echo "look up more about polling... may need to implement instead of sleep" > $output
+# echo "look up more about polling... may need to implement instead of sleep" > $output
 for i in {1..10}
 do
   echo -n "$i " > $output
