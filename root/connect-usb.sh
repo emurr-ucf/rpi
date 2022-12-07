@@ -29,11 +29,13 @@ do
   sleep 1
 done
 
+
+
 # get usb directories (regex) & diff (comm -13) with what was last in the usb
 ls /dev/sd* > "$currUSB"
 comm -13 "$preUSB" "$currUSB" > "$diffUSB"
 
-# take the diff which should now be the curr dir of the USB
+# stream editor (sed), suppress normal output (-n), print second line from the file ("$diffUSB"), then quit ('2{p;q}')
 directory=$(sed -n '2{p;q}' "$diffUSB")
 
 # mount the curr dir of the USB
